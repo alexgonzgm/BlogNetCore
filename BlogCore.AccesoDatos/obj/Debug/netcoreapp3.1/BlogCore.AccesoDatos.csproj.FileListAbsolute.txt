@@ -1,0 +1,5 @@
+C:\GitHub\BlogNetCore\BlogCore.AccesoDatos\bin\Debug\netcoreapp3.1\BlogCore.AccesoDatos.deps.json
+C:\GitHub\BlogNetCore\BlogCore.AccesoDatos\bin\Debug\netcoreapp3.1\BlogCore.AccesoDatos.dll
+C:\GitHub\BlogNetCore\BlogCore.AccesoDatos\obj\Debug\netcoreapp3.1\BlogCore.AccesoDatos.csprojAssemblyReference.cache
+C:\GitHub\BlogNetCore\BlogCore.AccesoDatos\obj\Debug\netcoreapp3.1\BlogCore.AccesoDatos.AssemblyInfoInputs.cache
+C:\GitHub\BlogNetCore\BlogCore.AccesoDatos\obj\Debug\netcoreapp3.1\BlogCore.AccesoDatos.AssemblyInfo.cs

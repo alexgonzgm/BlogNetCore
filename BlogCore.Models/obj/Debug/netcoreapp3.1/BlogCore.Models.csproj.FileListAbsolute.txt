@@ -1,0 +1,5 @@
+C:\GitHub\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.deps.json
+C:\GitHub\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.dll
+C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csprojAssemblyReference.cache
+C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.AssemblyInfoInputs.cache
+C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.AssemblyInfo.cs
