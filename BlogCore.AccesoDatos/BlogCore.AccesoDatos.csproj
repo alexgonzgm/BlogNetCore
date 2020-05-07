@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Data\Inicializado\" />
-    <Folder Include="Data\Repository\" />
   </ItemGroup>
 
   <ItemGroup>
