@@ -6,3 +6,4 @@ C:\GitHub\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.pd
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csproj.CoreCompileInputs.cache
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.dll
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.pdb
+C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csprojAssemblyReference.cache
