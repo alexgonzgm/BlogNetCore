@@ -18,15 +18,14 @@ function cargarDataTable() {
             {
                 "data": "id",
                 "render": function (data) {
-                    return
-                    `<div class="text-center">
-                        <a href="/Admin/Categorias/Edit/${data}" class="btn btn-success text-white" style="cursor:pointer; width:100px;">
-                            <i class="fas fa-edit"></i> 
+                    return `<div class='text-center'>
+                        <a href='/Admin/Categorias/Edit/${data}' class='btn btn-success text-white' style='cursor:pointer; width:100px;'>
+                            <i class='fas fa-edit'></i> 
                         Editar
                         </a>
                         &nbsp;
-                        <a onclick=Delete("/Admin/Categorias/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer; width:100px;">
-                            <i class="fas fa-delete"></i> 
+                        <a onclick=Delete('/Admin/Categorias/Delete/${data}') class='btn btn-danger text-white' style='cursor:pointer; width:100px;'>
+                            <i class='fas fa-trash-alt'></i> 
                         Borrar
                         </a>
                     </div> `;
@@ -40,6 +39,7 @@ function cargarDataTable() {
     });
 }
 function Delete(url) {
+    
     swal({
         title: "Esta seguro de borrar?",
         text: "ESte contenido no se puede recuperar!",
@@ -51,7 +51,7 @@ function Delete(url) {
     }, function () {
             $.ajax({
                 type: 'DELETE',
-                url: 'url',
+                url: url,
                 success: function (data) {
                     if (data.success) {
                         toastr.success(data.message);
