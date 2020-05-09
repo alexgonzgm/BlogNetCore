@@ -136,6 +136,26 @@ namespace BlogCore.Areas.Admin.Controllers
             return View();
         }
 
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var articuloDesdeDb = _contenedorTrabajo.Articulo.get(id);
+            string rutaDirectorioPrincipal = _hostEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, articuloDesdeDb.UrlImagen.TrimStart('\\'));
+            if (System.IO.File.Exists(rutaImagen))
+            {
+                System.IO.File.Delete(rutaImagen);
+            }
+            if (articuloDesdeDb == null)
+            {
+                return Json(new { success = false, message = "Error Borrando articulo" });
+            }
+            _contenedorTrabajo.Articulo.Remove(articuloDesdeDb);
+            _contenedorTrabajo.Save();
+            return Json(new { success = true, message = "Artículo borrado!" });
+
+        }
+
         #region LLamadas a la API
         [HttpGet]
         public IActionResult GetAll()
@@ -143,20 +163,6 @@ namespace BlogCore.Areas.Admin.Controllers
             return Json(new { data = _contenedorTrabajo.Articulo.GetAll(includeProperties : "Categoria") });
 
         }
-
-        //[HttpDelete]
-        //public IActionResult Delete(int id)
-        //{
-        //    var objFromDb = _contenedorTrabajo.Categoria.get(id);
-        //    if (objFromDb == null)
-        //    {
-        //        return Json(new { success = false, message = "Error borrando la categoría" });
-        //    }
-        //    _contenedorTrabajo.Categoria.Remove(objFromDb);
-        //    _contenedorTrabajo.Save();
-        //    return Json(new { success = true, message = "Categoria borrada correctammente!" });
-        //}
-
         #endregion
     }
 }
