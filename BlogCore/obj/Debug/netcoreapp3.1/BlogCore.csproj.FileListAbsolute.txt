@@ -439,3 +439,6 @@ C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\C
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categorias\Create.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_VistaCrearVolver.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categorias\Edit.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Index.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Create.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Edit.cshtml.g.cs
