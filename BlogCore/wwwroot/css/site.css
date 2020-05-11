@@ -69,3 +69,10 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.fondoTitulo{
+    opacity:0.5;
+    background-color:#000;
+    background: url('../imagenes/sliders/355c86c7-4e6b-414a-85f0-0f85bd37b097.jpg');
+    padding: 40px 0px 40px 0px ;
+    
+}

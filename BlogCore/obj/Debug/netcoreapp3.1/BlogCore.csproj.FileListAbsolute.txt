@@ -425,7 +425,6 @@ C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\BlogCore.MvcApplicationPa
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Index.cshtml.g.cs
-C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Privacy.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\_ViewImports.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\_ViewStart.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\bin\Debug\netcoreapp3.1\System.Text.Json.dll
@@ -442,3 +441,7 @@ C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\C
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Index.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Create.cshtml.g.cs
 C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articulos\Edit.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Index.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Edit.cshtml.g.cs
+C:\GitHub\BlogNetCore\BlogCore\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Details.cshtml.g.cs
