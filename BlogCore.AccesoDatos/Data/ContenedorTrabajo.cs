@@ -11,6 +11,7 @@ namespace BlogCore.AccesoDatos.Data
         public ICategoriaRepository Categoria { get; private set; }
         public IArticuloRepository Articulo { get; private set; }
         public ISliderRepository Slider { get; private set; }
+        public IUsuarioRepository Usuario{ get; private set; }
 
         private ApplicationDbContext _db;
         public ContenedorTrabajo(ApplicationDbContext db) 
@@ -19,6 +20,7 @@ namespace BlogCore.AccesoDatos.Data
             Categoria = new CategoriaRepository(_db);
             Articulo = new ArticuloRepository(_db);
             Slider = new SliderRepository(_db);
+            Usuario = new UsuarioRepository(_db);
         }
        
 

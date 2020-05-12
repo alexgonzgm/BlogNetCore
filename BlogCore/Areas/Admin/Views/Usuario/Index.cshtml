@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<div class="border">
+    <div class="row">
+        <div col-6>
+            <h2 class="text-info">Lista de Usuarios</h2>
+        </div>
+        <div col-6>
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-info">
+                <i class="fas fa-plus"></i> Registar un nuevo usuario
+            </a>
+        </div>
+    </div>
+</div>
+
