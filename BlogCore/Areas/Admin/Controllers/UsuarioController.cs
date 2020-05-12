@@ -23,5 +23,27 @@ namespace BlogCore.Areas.Admin.Controllers
             var usuarioActual = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             return View(_contenedorTrabajo.Usuario.GetAll(i => i.Id != usuarioActual.Value));
         }
+
+        public IActionResult Bloquear(string Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            _contenedorTrabajo.Usuario.BloquearUsuario(Id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Desbloquear(string Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            _contenedorTrabajo.Usuario.DesbloquearUsuario(Id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
