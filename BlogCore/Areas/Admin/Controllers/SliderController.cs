@@ -5,12 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlogCore.AccesoDatos.Data.Repository;
 using BlogCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 
 namespace BlogCore.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class SliderController : Controller
     {

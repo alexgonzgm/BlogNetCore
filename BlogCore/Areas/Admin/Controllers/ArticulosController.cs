@@ -1,6 +1,7 @@
 ﻿using BlogCore.AccesoDatos.Data.Repository;
 using BlogCore.Models;
 using BlogCore.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -11,6 +12,7 @@ using System.Linq;
 
 namespace BlogCore.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class ArticulosController : Controller
     {
