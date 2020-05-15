@@ -16,6 +16,13 @@ function cargarDataTable() {
             { "data": "nombre", "width": "25%" },
             { "data": "estado", "width": "15%" },
             {
+                "data": "urlImagen",
+                "render": function (urlImagen) { 
+                    return `<img src = "../${urlImagen}" width="200px">`
+                   
+                }
+            },
+            {
                 "data": "id",
                 "render": function (data) {
                     return `<div class='text-center'>
