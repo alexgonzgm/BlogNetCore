@@ -28,7 +28,7 @@
                     <label asp-for="Estado"></label>
                 </div>
                 <div class="col-1">
-                    <input asp-for="Estado" class="form-control" style="padding-right"/>
+                    <input asp-for="Estado" class="form-control" />
                     <span asp-validation-for="Estado" class="text-danger"></span>
                 </div>
             </div>
@@ -58,7 +58,7 @@
 
         </div>
         <div class="col-4 p-3">
-            <img src="@Model.UrlImagen"  style="border-radius:5px; border:1px solid #bbb9b9;width:100% ;height:" />
+            <img src="@Model.UrlImagen"  style="border-radius:5px; border:1px solid #bbb9b9;width:100% ;height:20px" />
         </div>
     </div>
 </form>

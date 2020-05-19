@@ -69,10 +69,9 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
-.fondoTitulo{
-    opacity:0.5;
-    background-color:#000;
-    background: url('../imagenes/sliders/355c86c7-4e6b-414a-85f0-0f85bd37b097.jpg');
-    padding: 40px 0px 40px 0px ;
-    
+.fondoTitulo {
+    opacity: 0.7;
+    background-color: #000;
+    background: url('../imagenes/sliders/c0c568cd-7a7d-40e8-9c17-365da6dd1998.jpg');
+    padding: 40px 0px 40px 0px;
 }
