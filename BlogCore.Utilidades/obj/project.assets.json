@@ -632,11 +632,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\BlogNetCore\\BlogCore.Utilidades\\BlogCore.Utilidades.csproj",
+      "projectUniqueName": "C:\\Users\\34646\\Desktop\\ProyectoNetCore\\BlogNetCore\\BlogCore.Utilidades\\BlogCore.Utilidades.csproj",
       "projectName": "BlogCore.Utilidades",
-      "projectPath": "C:\\GitHub\\BlogNetCore\\BlogCore.Utilidades\\BlogCore.Utilidades.csproj",
+      "projectPath": "C:\\Users\\34646\\Desktop\\ProyectoNetCore\\BlogNetCore\\BlogCore.Utilidades\\BlogCore.Utilidades.csproj",
       "packagesPath": "C:\\Users\\34646\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\BlogNetCore\\BlogCore.Utilidades\\obj\\",
+      "outputPath": "C:\\Users\\34646\\Desktop\\ProyectoNetCore\\BlogNetCore\\BlogCore.Utilidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\34646\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -651,6 +651,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -662,6 +663,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",
@@ -686,7 +688,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

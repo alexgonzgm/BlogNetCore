@@ -7,3 +7,12 @@ C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.cs
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.dll
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.pdb
 C:\GitHub\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csprojAssemblyReference.cache
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.deps.json
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.dll
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\bin\Debug\netcoreapp3.1\BlogCore.Models.pdb
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csprojAssemblyReference.cache
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.AssemblyInfoInputs.cache
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.AssemblyInfo.cs
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.csproj.CoreCompileInputs.cache
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.dll
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore.Models\obj\Debug\netcoreapp3.1\BlogCore.Models.pdb

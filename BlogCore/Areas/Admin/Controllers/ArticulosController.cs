@@ -1,14 +1,18 @@
 ﻿using BlogCore.AccesoDatos.Data.Repository;
 using BlogCore.Models;
 using BlogCore.Models.ViewModels;
+using BlogCore.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BlogCore.Areas.Admin.Controllers
 {
@@ -18,25 +22,35 @@ namespace BlogCore.Areas.Admin.Controllers
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;
         private readonly IWebHostEnvironment _hostEnvironment;
-        public ArticulosController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostEnvironment)
+        private ServiceArticulo serviceArticulo;
+        private ServiceCategorias serviceCategorias;
+        public ArticulosController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostEnvironment, ServiceArticulo serviceArticulo, ServiceCategorias serviceCategorias)
         {
             this._contenedorTrabajo = contenedorTrabajo;
             this._hostEnvironment = hostEnvironment;
+            this.serviceArticulo = serviceArticulo;
+            this.serviceCategorias = serviceCategorias;
         }
 
         public IActionResult Index()
         {
-           
-            return View(); 
+
+            return View();
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            List<Categoria> categorias = await this.serviceCategorias.GetCategoriasAsync();
+            var select = categorias.Select(i => new SelectListItem()
+            {
+                Text = i.Nombre,
+                Value = i.Id.ToString()
+            });
             ArticuloVM articuloVM = new ArticuloVM()
             {
                 Articulo = new Articulo(),
-                ListaCategorias = _contenedorTrabajo.Categoria.GetListaCategorias()
+                ListaCategorias = select
 
             };
             return View(articuloVM);
@@ -44,27 +58,29 @@ namespace BlogCore.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(ArticuloVM articuloVm)
+        public async Task<IActionResult> Create(ArticuloVM articuloVm)
         {
             if (ModelState.IsValid)
             {
                 string rutaPrincipal = _hostEnvironment.WebRootPath;
                 var archivos = HttpContext.Request.Form.Files;
-                if (articuloVm.Articulo.Id == 0  )
+                if (articuloVm.Articulo.Id == 0)
                 {
                     //nuevo Articulo
                     string nombreArchivo = Guid.NewGuid().ToString();
                     var subidas = Path.Combine(rutaPrincipal, @"imagenes\articulos");
                     var extension = Path.GetExtension(archivos[0].FileName);
-                    using (var fileStreams = new FileStream(Path.Combine(subidas,nombreArchivo + extension),FileMode.Create))
+                    using (var fileStreams = new FileStream(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
                     {
                         archivos[0].CopyTo(fileStreams);
                     }
                     articuloVm.Articulo.UrlImagen = @"\imagenes\articulos\" + nombreArchivo + extension;
                     articuloVm.Articulo.FechaCreacion = DateTime.Now.ToString();
 
-                    _contenedorTrabajo.Articulo.Add(articuloVm.Articulo);
-                    _contenedorTrabajo.Save();
+                    await this.serviceArticulo.Add(articuloVm.Articulo.Nombre, articuloVm.Articulo.FechaCreacion, articuloVm.Articulo.UrlImagen,
+                        articuloVm.Articulo.Descripcion, articuloVm.Articulo.CategoriaId, articuloVm.Articulo.Categoria);
+                    //_contenedorTrabajo.Articulo.Add(articuloVm.Articulo);
+                    //_contenedorTrabajo.Save();
                     return RedirectToAction(nameof(Index));
                 }
             }
@@ -72,31 +88,37 @@ namespace BlogCore.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
+            List<Categoria> categorias = await this.serviceCategorias.GetCategoriasAsync();
+            var select = categorias.Select(i => new SelectListItem()
+            {
+                Text = i.Nombre,
+                Value = i.Id.ToString()
+            });
             ArticuloVM articuloVM = new ArticuloVM()
             {
                 Articulo = new Articulo(),
-                ListaCategorias = _contenedorTrabajo.Categoria.GetListaCategorias()
+                ListaCategorias = select
 
             };
             if (id != null)
             {
-                articuloVM.Articulo = _contenedorTrabajo.Articulo.get(id.GetValueOrDefault());
+                articuloVM.Articulo = await this.serviceArticulo.FindArticulo(id.GetValueOrDefault()); //_contenedorTrabajo.Articulo.get(id.GetValueOrDefault());
             }
             return View(articuloVM);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(ArticuloVM articuloVM )
+        public async Task<IActionResult> Edit(ArticuloVM articuloVM)
         {
             if (ModelState.IsValid)
             {
                 string rutaPrincipal = _hostEnvironment.WebRootPath;
                 var archivos = HttpContext.Request.Form.Files;
 
-                var articuloDb = _contenedorTrabajo.Articulo.get(articuloVM.Articulo.Id);
+                var articuloDb = await this.serviceArticulo.FindArticulo(articuloVM.Articulo.Id); //_contenedorTrabajo.Articulo.get(articuloVM.Articulo.Id);
 
                 if (archivos.Count() > 0)
                 {
@@ -129,19 +151,22 @@ namespace BlogCore.Areas.Admin.Controllers
                 {
                     //Aqui es cuando la imagen ya existe y no se remplaza ,
                     //se debe conservar la que ya esta en la BD
-                    articuloVM.Articulo.UrlImagen =  articuloDb.UrlImagen;
+                    articuloVM.Articulo.UrlImagen = articuloDb.UrlImagen;
+                    articuloVM.Articulo.FechaCreacion = articuloDb.FechaCreacion;
                 }
-                _contenedorTrabajo.Articulo.Update(articuloVM.Articulo);
-                _contenedorTrabajo.Save();
+                await this.serviceArticulo.Update(articuloVM.Articulo.Id, articuloVM.Articulo.Nombre, articuloVM.Articulo.FechaCreacion, articuloVM.Articulo.UrlImagen,
+                         articuloVM.Articulo.Descripcion, articuloVM.Articulo.CategoriaId, articuloVM.Articulo.Categoria);
+                //_contenedorTrabajo.Articulo.Update(articuloVM.Articulo);
+                //_contenedorTrabajo.Save();
                 return RedirectToAction(nameof(Index));
             }
             return View();
         }
 
         [HttpDelete]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var articuloDesdeDb = _contenedorTrabajo.Articulo.get(id);
+            var articuloDesdeDb = /*await this.serviceArticulo.FindArticulo(id); */_contenedorTrabajo.Articulo.get(id);
             string rutaDirectorioPrincipal = _hostEnvironment.WebRootPath;
             var rutaImagen = Path.Combine(rutaDirectorioPrincipal, articuloDesdeDb.UrlImagen.TrimStart('\\'));
             if (System.IO.File.Exists(rutaImagen))
@@ -154,15 +179,19 @@ namespace BlogCore.Areas.Admin.Controllers
             }
             _contenedorTrabajo.Articulo.Remove(articuloDesdeDb);
             _contenedorTrabajo.Save();
+            //await this.serviceArticulo.Delete(articuloDesdeDb.Id);
             return Json(new { success = true, message = "Artículo borrado!" });
 
         }
 
         #region LLamadas a la API
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Json(new { data = _contenedorTrabajo.Articulo.GetAll(includeProperties : "Categoria") });
+            var data1 = _contenedorTrabajo.Articulo.GetAll(includeProperties: "Categoria");
+            var data2 = await this.serviceArticulo.GetArticulosAsync();
+            //return Json(new { data = _contenedorTrabajo.Articulo.GetAll(includeProperties: "Categoria") });
+            return Json(new { data = await serviceArticulo.GetArticulosAsync() });
 
         }
         #endregion

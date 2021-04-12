@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using BlogCore.Utilidades;
 using BlogCore.Models;
 using BlogCore.AccesoDatos.Data.Inicializado;
+using BlogCore.Services;
 
 namespace BlogCore
 {
@@ -33,6 +34,9 @@ namespace BlogCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string url = this.Configuration["url"];
+            services.AddTransient<ServiceCategorias>(c => new ServiceCategorias(url));
+            services.AddTransient<ServiceArticulo>(c => new ServiceArticulo(url));
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
