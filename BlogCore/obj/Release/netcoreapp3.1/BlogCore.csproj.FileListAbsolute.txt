@@ -485,3 +485,4 @@ C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcorea
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\BlogCore.dll
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\BlogCore.pdb
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\BlogCore.genruntimeconfig.cache
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\bin\Release\netcoreapp3.1\System.Net.Http.Formatting.dll

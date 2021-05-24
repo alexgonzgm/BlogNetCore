@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CntYuEbwwx9WiL+izxYHrO5nl5o04NxmZXhb7L2gziPeBj9yJEcixqawkQ03yantbAy8gn36PNwzPmp25kLAsw==",
+  "dgSpecHash": "5DuEZdev2TOkALPAQ4+9nCu2pMBPhBe22KU8Ua3/VrFkEC0Xn8dyb4LYNL3uVh71fr5BXQMzc0Vrx9xtW3LicQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\34646\\Desktop\\ProyectoNetCore\\BlogNetCore\\BlogCore\\BlogCore.csproj",
+  "projectFilePath": "C:\\Users\\34646\\Desktop\\DesarrolloWeb\\MASTER\\.NET\\2021\\ProyectoNetCore\\BlogNetCore\\BlogCore\\BlogCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\34646\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\34646\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

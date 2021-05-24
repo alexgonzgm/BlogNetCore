@@ -337,6 +337,7 @@ C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcorea
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\BlogCore.deps.json
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\BlogCore.runtimeconfig.json
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\BlogCore.pdb
+C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Net.Http.Formatting.dll
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\34646\Desktop\ProyectoNetCore\BlogNetCore\BlogCore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
